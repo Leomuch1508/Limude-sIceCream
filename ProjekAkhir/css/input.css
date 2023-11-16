@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+body {
+    --primary-color: #FACBEA;
+    --secondary-color: #B0578D;
+    --tertiary-color: #D988B9;
+
+    --text-primary-color: #361500;
+    --navbar-color: #FFFFFF;
+}
+
+body.dark {
+    --primary-color: #212121;
+    --secondary-color: #616161;
+    --tertiary-color: #424242;
+
+    --text-primary-color: #FFFFFF;
+    --navbar-color: #424242;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mooli', sans-serif;
+}
+
+.input {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    width: 50%;
+    padding: 64px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-title h1 {
+    margin-bottom: 8px;
+}
+
+.form-container {
+    width: 100%;
+    padding-block: 32px;
+}
+
+.form-container label {
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+}
+
+.input-field {
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid #CDCDCD;
+    border-radius: 4px;
+    display: flex;
+}
+
+.input-field:focus {
+    outline: 2px solid var(--tertiary-color);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--secondary-color);
+    border: var(--tertiary-color);
+    border-radius: 4px;
+    color: white;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.input-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}

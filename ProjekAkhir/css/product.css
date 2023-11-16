@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@900&family=Open+Sans:wght@400;500;600;700;800&family=Shrikhand&family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #f3f3f3;
+  --navbar-color: #facbea;
+  --secondary-color: #040437;
+  --tertiary-color: #f80505;
+
+  --text-primary-color: #361500;
+}
+
+body {
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: change-background 30s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background-color: var(--navbar-color);
+  color: var(--text-primary-color);
+}
+
+.darkMode nav {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.logo h1 {
+  font-family: "Pacifico", cursive;
+  color: var(--text-primary-color);
+}
+
+.darkMode .logo h1 {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.list-item {
+  display: flex;
+  list-style-type: none;
+}
+
+.list-item hr {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.darkMode .list-item hr {
+  border: 1px solid var(--navbar-color);
+}
+
+.list-item li {
+  padding: 0 64px;
+}
+
+.list-item li a {
+  color: var(--text-primary-color);
+  text-decoration: none;
+}
+
+.darkMode .list-item li a {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.list-item li p {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.list-item li a:hover {
+  font-weight: bold;
+}
+
+.nav-icon a {
+  text-decoration: none;
+}
+
+.nav-icon a button {
+  font-size: 20px;
+  background-color: transparent;
+  margin-right: 56px;
+  border: none;
+  background-color: var(--navbar-color);
+  color: var(--text-primary-color);
+}
+
+.darkMode .nav-icon a button {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.toggle button {
+  border: transparent;
+  background-color: var(--navbar-color);
+  color: var(--secondary-color);
+}
+
+.darkMode .toggle button {
+  border: transparent;
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.toggle button i {
+  font-size: 24px;
+}
+
+.toggle li {
+  list-style: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links p {
+  font-family: "Silkscreen", cursive;
+  color: var(--text-primary-color);
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--navbar-color);
+}
+
+.darkMode .nav-links li a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.nav-links li button {
+  padding: 2px 15px;
+  color: var(--navbar-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--navbar-color);
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.darkMode .nav-links li button {
+  background-color: var(--navbar-color);
+  color: var(--secondary-color);
+}
+
+.nav-links li button:hover,
+.nav-links li button a:hover {
+  background-color: var(--navbar-color);
+  color: var(--text-primary-color);
+}
+
+.darkMode .nav-links li button:hover,
+.darkMode .nav-links li button a:hover {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+.toggleBox {
+  font-size: 23px;
+  text-align: center;
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: 60vh;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .genre {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary-color);
+  padding-left: 5rem;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.darkMode main .genre {
+  background-color: transparent;
+  color: var(--text-primary-color);
+}
+
+.video-section {
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  width: 80rem;
+  height: 20rem;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.swiper-slide a {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.swiper-slide .title {
+  position: absolute;
+  margin-top: 1px;
+  padding-top: 2px;
+  top: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.swiper-slide .order button {
+  position: absolute;
+  margin-bottom: 1px;
+  padding-bottom: 2px;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.prev-button {
+  transform: rotate(180deg);
+}
+
+.next-button,
+.prev-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding-right: 5rem;
+}
+
+.next-button img,
+.prev-button img {
+  width: 30px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.next-button img:hover,
+.prev-button img:hover {
+  opacity: 1;
+}
+
+/* Footer */
+
+/* ------------------Footer----------------- */
+
+footer {
+  width: 100%;
+  height: 9rem;
+  background-color: var(--navbar-color);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.darkMode footer {
+  background-color: var(--secondary-color);
+}
+
+footer h4 {
+  color: var(--text-primary-color);
+}
+
+.darkMode footer h4 {
+  color: var(--navbar-color);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--text-primary-color);
+  font-size: 14px;
+}
+
+.darkMode footer a {
+  color: var(--navbar-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.socials,
+.other-links,
+.contacts {
+  width: 20rem;
+  height: 7rem;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkMode p {
+  background-color: var(--secondary-color);
+  color: var(--navbar-color);
+}
+
+@keyframes change-background {
+  0%,
+  100% {
+    background-image: url(../gambar/bg1.png);
+  }
+  20% {
+    background-image: url(../gambar/bg2.png);
+  }
+  40% {
+    background-image: url(../gambar/bg3.png);
+  }
+  60% {
+    background-image: url(../gambar/bg4.png);
+  }
+  80% {
+    background-image: url(../gambar/bg5.png);
+  }
+}
+
+@media (max-width: 1100px) {
+  nav input {
+    margin: 0 2rem;
+  }
+  .nav-links {
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    margin: 0;
+    width: 13rem;
+    height: 100vh;
+    display: block;
+    background-color: #2d3147;
+    z-index: 100;
+    transition: 0.4s;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .toggleBox {
+    color: #f3f3f3;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 25px;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    height: 60rem;
+  }
+  .next-button,
+  .prev-button {
+    padding: 0;
+  }
+  .swiper {
+    width: 72rem;
+    height: 10rem;
+  }
+  .logo p {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    height: 52rem;
+  }
+  main .genre {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .next-button,
+  .prev-button {
+    padding-right: 10px;
+  }
+  .next-button img,
+  .prev-button img {
+    width: 20px;
+  }
+  .swiper {
+    width: 75rem;
+    height: 9rem;
+  }
+  nav input {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  nav input {
+    width: 8rem;
+  }
+}
