@@ -22,7 +22,7 @@
                 echo "
                 <script>
                     alert('Success!');
-                    document.location.href = 'menu.php';
+                    document.location.href = 'admin.php';
                 </script>";
             } else {
                 echo "
