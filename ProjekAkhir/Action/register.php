@@ -1,5 +1,5 @@
 <?php
-    require 'function/connection.php';
+    require '../function/connection.php';
 
     if(isset($_POST['Register'])) {
         $first_name = $_POST['fname'];
@@ -56,7 +56,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Limude's Ice Cream</title>
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
     <section class="form">
