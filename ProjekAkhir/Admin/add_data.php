@@ -11,7 +11,7 @@
 <body>
     <section class="input">
         <div class="input-background">
-            <img src="gambar/1.png" alt="">
+            <img src="../gambar/1.png" alt="">
         </div>
         <div class="input-box">
             <div class="input-title">
